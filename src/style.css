@@ -1,0 +1,39 @@
+/** @format */
+/* style.css */
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-board {
+  margin-right: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font-size: 24px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}
+
+.game-info {
+  text-align: left;
+}
+
+/* Add more styling as needed */
