@@ -4,11 +4,17 @@
 import React from "react";
 
 const Square = ({ value, onClick }) => (
-  <button
-    className='square'
-    onClick={onClick}>
-    {value}
-  </button>
+  <>
+    <div className='square container flex justify-center'>
+     
+
+      <button
+        className='square'
+        onClick={onClick}>
+        {value}
+      </button>
+    </div>
+  </>
 );
 
 export default Square;

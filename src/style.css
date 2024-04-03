@@ -1,8 +1,16 @@
 /** @format */
 /* style.css */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .game {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .game-board {
@@ -18,22 +26,67 @@
 .square {
   width: 100px;
   height: 100px;
-  font-size: 24px;
-  background-color: #eee;
-  border: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: #ddd;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: darkcyan;
+}
+/* Game.css */
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-board {
+  margin-right: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+
+.square {
+  background-color: #fff;
+  border: 1px solid #999;
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* Animasi untuk pemenang */
+.winner {
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
   }
 }
 
-.game-info {
-  text-align: left;
-}
 
 /* Add more styling as needed */
